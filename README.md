@@ -14,6 +14,8 @@ A single-page portfolio site built with React (Vite), Tailwind CSS, and Framer M
 
 ```
 Portfolio Website/
+├── .github/workflows/
+│   └── deploy.yml    # GitHub Pages deploy workflow
 ├── public/           # Static assets (favicon)
 ├── src/
 │   ├── components/   # Navbar, Hero, About, Skills, Experience, Education, Projects, Contact, Footer
@@ -63,13 +65,18 @@ npm run preview
 
 ### GitHub Pages
 
-1. In the repo, go to **Settings → Pages**.
-2. Source: **GitHub Actions** (recommended) or deploy the `dist` folder from a branch.
-3. If using a project site (e.g. `username.github.io/repo-name`), set `base` in `vite.config.js` to the repo name:
+The repo is set up to deploy via **GitHub Actions**:
+
+1. **Push the repo to GitHub** (default branch `main`; if you use `master`, edit `.github/workflows/deploy.yml` and change `branches: ['main']` to `branches: ['master']`).
+
+2. **Enable GitHub Pages:** In the repo go to **Settings → Pages**. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+
+3. **Repo name:** `vite.config.js` uses `base: '/Portfolio-Website/'`. If your repo name is different (e.g. `portfolio-website`), change it to match:
    ```js
-   base: '/repo-name/',
+   base: '/your-repo-name/',
    ```
-4. Rebuild and push the `dist` output or use a GitHub Actions workflow that runs `npm run build` and publishes `dist`.
+
+4. **Deploy:** Push to `main` (or run the workflow manually under **Actions → Deploy to GitHub Pages**). After the workflow finishes, the site will be at `https://<username>.github.io/Portfolio-Website/`.
 
 ## Live demo
 
