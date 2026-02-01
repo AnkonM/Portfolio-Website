@@ -8,8 +8,10 @@ html {
 }
 
 body {
-  @apply bg-dark-bg text-gray-200 antialiased;
+  @apply text-gray-200 antialiased;
   font-family: 'Inter', system-ui, sans-serif;
+  /* Fallback matches gradient ends */
+  background: #020617;
 }
 
 /* Focus visible for accessibility */
