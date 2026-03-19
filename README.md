@@ -1,33 +1,31 @@
-# My Portfolio
+# Ankon Mukherjee — Portfolio
 
-A portfolio site built with React (Vite), Tailwind CSS, and Framer Motion.
+Static GitHub Pages deployment of the portfolio built with Next.js (App Router) + Tailwind CSS.
 
 ## Tech stack
 
-- **Framework:** React 18 (Vite)
+- **Framework:** Next.js (React, App Router)
 - **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
-- **State:** Local React state only
+- **Animations:** `tw-animate-css` (used in the source project)
 - **Backend:** None
+- **Deployment target:** GitHub Pages
 
 ## Folder structure
 
 ```
-Portfolio Website/
+Portfolio-Website/
+├── app/
+│   ├── page.tsx
+│   └── layout.tsx
+├── components/
+│   └── portfolio/        # Section components (navigation, hero, about, skills, etc.)
+├── styles/
+├── public/
 ├── .github/workflows/
-│   └── deploy.yml    # GitHub Pages deploy workflow
-├── public/           # Static assets (favicon)
-├── src/
-│   ├── components/   # Navbar, Hero, About, Skills, Experience, Education, Projects, Contact, Footer
-│   ├── data/        # skills.js, experience.js, education.js, personal.js
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── index.html
+│   └── deploy.yml        # Builds and deploys to GitHub Pages
 ├── package.json
-├── tailwind.config.js
-├── postcss.config.js
-└── vite.config.js
+├── postcss.config.mjs
+└── next.config.mjs
 ```
 
 ## Run locally
@@ -40,34 +38,27 @@ Portfolio Website/
    ```bash
    npm run dev
    ```
-3. Open the URL shown in the terminal (e.g. `http://localhost:5173`).
+3. Open the URL shown in the terminal (typically `http://localhost:3000`).
 
-## Build
+## Build (static export)
 
 ```bash
 npm run build
 ```
 
-Output is in `dist/`. Preview the production build:
+The GitHub Pages workflow uploads the static-export output from `out/`.
 
-```bash
-npm run preview
-```
+## Deployment (GitHub Pages)
 
-## Deployment
+1. Push the repo to GitHub (branch `main`).
+2. In the repo, go to **Settings → Pages**.
+3. Set **Source** to **GitHub Actions**.
+4. After the workflow runs, the site will be available at:
+   `https://<username>.github.io/Portfolio-Website/`
 
-### Vercel
+## Live demo
 
-1. Push the repo to GitHub.
-2. In [Vercel](https://vercel.com), import the repository.
-3. Use default settings (framework: Vite; build: `npm run build`; output: `dist`).
-4. Deploy. The live URL will be provided by Vercel.
-
-### GitHub Pages
-
-The repo is currently deployed to GitHub Pages via **GitHub Actions**:
-
-https://ankonm.github.io/Portfolio-Website/
+[Add your live URL here after deployment.]
 
 ---
 

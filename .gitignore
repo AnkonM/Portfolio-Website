@@ -1,15 +1,21 @@
-# Dependencies
+# v0 sandbox internal files
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+.npmrc
+.snowflake/
+.v0-trash/
+.vercel/
+next.user-config.*
+
+# Environment variables
+.env*.local
+
+# Common ignores
 node_modules/
-
-# Build
+.next/
+out/
 dist/
-
-# Local
-.env
-.env.local
+_ghpages-test/
 *.log
 .DS_Store
-
-# Editor
-.vscode/
-.idea/

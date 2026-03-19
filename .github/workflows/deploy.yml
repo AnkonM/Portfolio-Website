@@ -33,13 +33,21 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Choose static export folder
+        run: |
+          if [ -d "./out/Portfolio-Website" ]; then
+            echo "UPLOAD_PATH=./out/Portfolio-Website" >> $GITHUB_ENV
+          else
+            echo "UPLOAD_PATH=./out" >> $GITHUB_ENV
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: ${{ env.UPLOAD_PATH }}
 
   deploy:
     environment:
