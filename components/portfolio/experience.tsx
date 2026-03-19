@@ -55,7 +55,7 @@ function TimelineItem({
       {/* Timeline dot */}
       <div className="absolute left-0 top-0 -translate-x-1/2 w-3 h-3 rounded-full bg-background border-2 border-primary z-10" />
 
-      <div className="glass rounded-xl p-6 hover:border-primary/30 transition-all duration-300">
+      <div className="glass-gradient rounded-xl p-6 transition-all duration-300 glow-gradient">
         <div className="flex items-center gap-2 mb-2">
           <Briefcase className="w-4 h-4 text-primary" />
           <span className="text-xs font-mono text-muted-foreground">

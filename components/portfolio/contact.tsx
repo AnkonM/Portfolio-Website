@@ -85,7 +85,7 @@ export function Contact() {
                     href={link.href}
                     target={link.title !== "Email" ? "_blank" : undefined}
                     rel={link.title !== "Email" ? "noopener noreferrer" : undefined}
-                    className={`group glass rounded-xl p-6 hover:border-primary/30 transition-all duration-500 ${
+                    className={`group glass-gradient rounded-xl p-6 transition-all duration-500 glow-gradient ${
                       isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                     }`}
                     style={{ transitionDelay: `${300 + index * 100}ms` }}

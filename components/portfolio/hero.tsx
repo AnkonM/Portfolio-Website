@@ -12,16 +12,18 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-[oklch(0.15_0.03_200)]" />
+      {/* Enhanced gradient orbs */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <div 
-          className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] animate-pulse"
+          className="absolute top-1/4 -left-1/4 w-[700px] h-[700px] rounded-full bg-gradient-to-br from-primary/10 to-primary/5 blur-[150px] animate-pulse"
           style={{ animationDuration: "8s" }}
         />
         <div 
-          className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] rounded-full bg-[oklch(0.6_0.12_220)]/5 blur-[100px] animate-pulse"
+          className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-tl from-[oklch(0.6_0.12_200)]/10 to-[oklch(0.5_0.1_180)]/5 blur-[130px] animate-pulse"
           style={{ animationDuration: "10s", animationDelay: "2s" }}
+        />
+        <div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-radial from-primary/3 to-transparent blur-[100px]"
         />
       </div>
 

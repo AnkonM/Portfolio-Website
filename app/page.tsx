@@ -9,15 +9,20 @@ import { Footer } from "@/components/portfolio/footer"
 
 export default function Portfolio() {
   return (
-    <main className="relative">
-      <Navigation />
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <Skills />
-      <Contact />
-      <Footer />
-    </main>
+    <>
+      {/* Animated mesh background */}
+      <div className="bg-mesh" aria-hidden="true" />
+      
+      <main className="relative">
+        <Navigation />
+        <Hero />
+        <About />
+        <Projects />
+        <Experience />
+        <Skills />
+        <Contact />
+        <Footer />
+      </main>
+    </>
   )
 }
