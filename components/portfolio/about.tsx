@@ -70,7 +70,7 @@ export function About() {
               </div>
 
               <div className="space-y-8">
-                <div className="glass rounded-xl p-6">
+                <div className="glass-gradient rounded-xl p-6 glow-gradient">
                   <h3 className="text-sm font-mono text-primary uppercase tracking-wider mb-4">
                     Focus Areas
                   </h3>

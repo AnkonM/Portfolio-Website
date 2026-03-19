@@ -64,7 +64,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       }`}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      <div className="glass rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-500 glow">
+      <div className="glass-gradient rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-500 glow-gradient">
         <div className="p-8">
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center gap-3">

@@ -78,7 +78,7 @@ export function Skills() {
               return (
                 <div
                   key={category.title}
-                  className={`glass rounded-xl p-6 hover:border-primary/30 hover:scale-105 transition-all duration-500 ${
+                  className={`glass-gradient rounded-xl p-6 hover:scale-105 transition-all duration-500 glow-gradient ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                   }`}
                   style={{ transitionDelay: `${index * 100}ms` }}
